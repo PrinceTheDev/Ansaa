@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { PermitComponent } from './permit/permit.component';
+import { PermitComponent } from './components/permit/permit.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,PermitComponent,RouterLink,RouterLinkActive],
+  imports: [RouterOutlet,RouterLink,RouterLinkActive,PermitComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

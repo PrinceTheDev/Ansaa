@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PermitComponent } from './permit/permit.component';
+import { PermitComponent } from './components/permit/permit.component';
 
 export const routes: Routes = [
     {

@@ -1,15 +1,4 @@
-body {
-    background-color: rgb(178, 196, 216);
-    display: flexbox;
-}
+.container {
+    margin: 5%;
 
-.main-mobile {
-    margin: 20px;
-    display: flexbox;
-    justify-content: space-between;
-    align-content: space-between;
-}
-
-.ads-table {
-    margin-top: 20px;
 }
