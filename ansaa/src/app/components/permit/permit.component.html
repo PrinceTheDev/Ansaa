@@ -1,35 +1,142 @@
-<div class="container">
-<div class="container-fluid bg-light ads-table">
-    <table class="table table-bordered ">
-      <thead>
-        <tr>
-        <th>S/N</th>
-        <th>Ads Type</th>
-        <th>Branding Type</th>
-        <th>Ads Period</th>
-        <th>Vehicle Type</th>
-        <th>No of Vehicle</th>
-        <th>Start Date</th>
-        <th>End Date</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <!-- <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td> -->
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<div class="container bg-info">
+    <div class="row justify-content-between mt-5 mb-2 align-items-center">
+        <div class="col-auto mt-2 px-3 py-3">
+            <span>Mobile Advertisement</span>
+        </div>
+        <div class="col-auto mt-2 px-3 py-3">
+            <button class="btn btn-dark">Request Mobile Permit</button>
+        </div>
+    </div>
 
+    <div class="container pt-4 bg-light ads-table">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>Ads Type</th>
+                    <th>Branding Type</th>
+                    <th>Ads Period</th>
+                    <th>Vehicle Type</th>
+                    <th>No of Vehicle</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
+
+        <div class="row permit-box justify-content-center align-items-center">
+            <div class="col-12 text-center">
+                <div class="no-permit mb-3">
+                    <span>You Don't Have Any Mobile Advertisement Permit</span>
+                </div>
+                <div class="create-permit">
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Request Mobile Permit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Form -->
+                    <form>
+                        <div class="modal-header bg-secondary">
+                            <h4 class="modal-title">Mobile Permit Application</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <label for="adsType" class="form-label">Ads Type</label>
+                                    <select name="adsType" id="adsType" class="form-control">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="Pictures">Pictures</option>
+                                        <option value="Videos">Videos</option>
+                                        <option value="Text">Text</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="brandingYear" class="form-label">Branding Year</label>
+                                    <input type="date" id="brandingYear" class="form-control" placeholder="Select Year">
+                                </div>
+                                <div class="col-4">
+                                    <label for="brandingType" class="form-label">Branding Type</label>
+                                    <select id="brandingType" class="form-control">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="Pictures">Pictures</option>
+                                        <option value="Videos">Videos</option>
+                                        <option value="Text">Text</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="adsPeriod" class="form-label">Ads Period</label>
+                                    <select id="adsPeriod" class="form-control">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="Short-term">Short-term</option>
+                                        <option value="Long-term">Long-term</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="vehicleType" class="form-label">Vehicle Type</label>
+                                    <select id="vehicleType" class="form-control">
+                                        <option value="" disabled selected>Select Option</option>
+                                        <option value="Car">Car</option>
+                                        <option value="Van">Van</option>
+                                        <option value="Truck">Truck</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="numVehicles" class="form-label">No Of Vehicles</label>
+                                    <input id="numVehicles" class="form-control" type="number" placeholder="Enter number">
+                                </div>
+                                <div class="col-4">
+                                    <label for="startDate" class="form-label">Start Date</label>
+                                    <input id="startDate" class="form-control" type="date">
+                                </div>
+                                <div class="col-4">
+                                    <label for="endDate" class="form-label">End Date</label>
+                                    <input id="endDate" class="form-control" type="date">
+                                </div>
+                            </div>
+
+                            <fieldset class="row mt-4 bordered">
+                                <legend>Contact Person Information</legend>
+                                <div class="col-6 mb-3">
+                                    <label for="fname" class="form-label">First Name</label>
+                                    <input class="form-control" type="text" id="fname" placeholder="Enter your first name">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="lname" class="form-label">Last Name</label>
+                                    <input class="form-control" type="text" id="lname" placeholder="Enter your last name">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input class="form-control" type="email" id="email" placeholder="Enter your email">
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label for="birthday" class="form-label">Birthday</label>
+                                    <input class="form-control" type="date" id="birthday">
+                                </div>
+                            </fieldset>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="col-12 mt-3">
+                                        <input type="submit" class="btn btn-dark" value="Submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

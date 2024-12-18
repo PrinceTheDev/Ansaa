@@ -1,0 +1,25 @@
+.permit-box {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.permit-inner-box {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    align-items: center;
+    
+}
+
+.no-permit {
+    margin: auto;
+    align-self: center;
+}
+.create-permit {
+    margin: auto;
+    align-self: center;
+}
