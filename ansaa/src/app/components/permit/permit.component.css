@@ -1,25 +1,100 @@
-.permit-box {
-    display: flex;
+.main {
+    position: relative;
+    background-color: #DAE0E9;
+    width: 1512px;
+    height: 1013px;    
+}
+
+.mobile-txt {
+    position: absolute;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    letter-spacing: -0.02em;
+    color: #0B1023;
+}
+
+.request {
+    background: #080239;
+    border-radius: 2.62069px;
+    color: white;
+
+}
+
+.ads-table {
+    /* position: relative; */
+    border-radius: 2px 2px 0px 0px;
+}
+
+.custom-header th {
+    background-color: #080239;
+    color: white;
+  }
+
+  .permit-box {
+    width: auto;
+    height: 100%;
     margin: auto;
-    width: 100%;
-    height: 100px;
+    padding-top: 15%;
+    padding-bottom: 40%;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.permit-inner-box {
+  .no-permit {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      /* identical to box height, or 16px */
+      letter-spacing: -0.02em;
+
+      color: #0B1023;
+  }
+
+.modal {
+    position: absolute;
+    width: 100%;
+}
+.modal-dialog {
+    margin: auto;
     display: flex;
-    flex-direction: column;
-    padding: 5%;
+    justify-content: center;
     align-items: center;
-    
+    width: 100%;
+    height: auto;
+
+}
+.modal-header {
+    background-color: #DAE0E9;
 }
 
-.no-permit {
-    margin: auto;
-    align-self: center;
+.btn-close {
+    background: none;
+    color: rgb(222, 68, 48);
+    font-size: 2rem;
+    line-height: 1;
 }
-.create-permit {
-    margin: auto;
-    align-self: center;
+
+.btn-close::before {
+    content: 'x';
 }
+
+
+fieldset {
+    all: unset;
+    border: 1px solid #000;
+}
+legend {
+    all: unset;
+}
+
+
+
+
+
+

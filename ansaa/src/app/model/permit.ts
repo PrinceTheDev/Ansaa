@@ -4,9 +4,10 @@ export class PermitModel {
     userId: number;
     adsType: string;
     brandingType: string;
+    brandingYear: Date;
     adsPeriod: string;
     vehicleType: string;
-    noOfVehicle: number;
+    noOfVehicle: string;
     startDate: Date;
     endDate: Date;
     status: string;
@@ -20,9 +21,10 @@ export class PermitModel {
         this.userId = 0;
         this.adsType = "";
         this.brandingType = "";
+        this.brandingYear = new Date();
         this.adsPeriod = "";
         this.vehicleType = "";
-        this.noOfVehicle = 0;
+        this.noOfVehicle = "";
         this.startDate  = new Date();
         this.endDate = new Date();
         this.status = "";

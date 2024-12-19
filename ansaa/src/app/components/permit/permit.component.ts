@@ -12,12 +12,12 @@ import { PermitModel } from '../../model/permit';
 })
 export class PermitComponent {
 
-  permitForm?: FormGroup;
+  permitForm: FormGroup = new FormGroup({});
 
   permitObj: PermitModel = new PermitModel();
 
   constructor() {
-    this.createForm
+    this.createForm();
   }
 
   createForm() {
@@ -25,6 +25,7 @@ export class PermitComponent {
       userid: new FormControl(this.permitObj.userId),
       adsType: new FormControl(this.permitObj.adsType),
       brandingType: new FormControl(this.permitObj.brandingType),
+      brandingYear: new FormControl(this.permitObj.brandingYear),
       adsPeriod: new FormControl(this.permitObj.adsPeriod),
       vehicleType: new FormControl(this.permitObj.vehicleType),
       noOfVehicle: new FormControl(this.permitObj.noOfVehicle),

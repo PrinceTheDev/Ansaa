@@ -1,16 +1,18 @@
-<div class="container bg-info">
+<div class="container main">
     <div class="row justify-content-between mt-5 mb-2 align-items-center">
         <div class="col-auto mt-2 px-3 py-3">
-            <span>Mobile Advertisement</span>
+            <span class="mobile-txt">Mobile Advertisement</span>
         </div>
         <div class="col-auto mt-2 px-3 py-3">
-            <button class="btn btn-dark">Request Mobile Permit</button>
+            <button type="button" class="btn request" data-bs-toggle="modal" data-bs-target="#myModal">
+                Request Mobile Permit
+            </button>
         </div>
     </div>
 
-    <div class="container pt-4 bg-light ads-table">
-        <table class="table table-bordered">
-            <thead>
+    <div class="container pt-4 bg-light">
+        <table class="table ads-table">
+            <thead class="custom-header">
                 <tr>
                     <th>S/N</th>
                     <th>Ads Type</th>
@@ -25,17 +27,43 @@
                 </tr>
             </thead>
             <tbody>
-                <tr></tr>
+                <tr> </tr>
             </tbody>
         </table>
 
         <div class="row permit-box justify-content-center align-items-center">
             <div class="col-12 text-center">
-                <div class="no-permit mb-3">
+                <div class="svg mb-5">
+                    <svg width="172" height="118" viewBox="0 0 172 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.4406 100.368C11.7421 100.368 7.15683 100.371 2.57507 100.368C0.400854 100.368 0.00489893 99.9881 0.00489893 97.8202C0.00136362 68.7103 -0.00924232 39.6038 0.0190402 10.4938C0.0261108 4.04286 4.14475 0.0162969 10.6533 0.00926973C36.6555 -0.00478458 62.6542 -0.001271 88.6564 0.00926973C95.3487 0.0127833 99.3719 4.07448 99.3825 10.7503C99.3896 14.8998 99.3825 19.0493 99.386 23.1989C99.386 23.7681 99.4355 24.3373 99.4709 25.0751C100.21 25.0751 100.843 25.0751 101.472 25.0751C109.296 25.0751 117.119 25.1173 124.943 25.0576C128.047 25.033 130.295 26.1889 131.978 28.8417C137.896 38.1843 143.942 47.4461 149.877 56.7746C150.924 58.419 152.225 59.6031 153.978 60.4604C158.617 62.7266 163.17 65.1721 167.83 67.3927C170.725 68.7735 172.026 70.8922 172.001 74.0509C171.945 81.8827 171.991 89.7144 171.984 97.5462C171.984 100.076 171.683 100.357 169.152 100.361C168.335 100.361 167.522 100.361 166.585 100.361C165.793 106.147 163.273 110.873 158.557 114.295C154.968 116.899 150.938 118.108 146.487 117.978C136.765 117.693 130.044 111.537 127.449 100.361C126.916 100.361 126.343 100.361 125.767 100.361C103.003 100.361 80.2353 100.375 57.4714 100.332C55.9866 100.332 55.4386 100.645 55.1558 102.251C53.5401 111.446 45.2816 118.09 35.8494 117.992C26.35 117.89 18.332 111.14 16.7764 101.949C16.6986 101.492 16.5855 101.039 16.4406 100.364V100.368ZM96.2149 79.0507C96.2467 78.4183 96.2926 77.9053 96.2926 77.3923C96.2926 55.1303 96.2997 32.8682 96.2926 10.6062C96.2926 5.66964 93.5351 2.97122 88.4902 2.9677C62.6153 2.95716 36.7403 2.95716 10.8654 2.9677C5.7922 2.9677 3.05234 5.7364 3.05234 10.81C3.04527 32.8964 3.0488 54.9827 3.04527 77.0726C3.04527 77.698 3.04527 78.3234 3.04527 79.0507H96.2184H96.2149ZM99.4921 28.1249V97.1597H127.524C129.04 86.8192 136.136 79.8869 145.67 79.2826C150.298 78.991 154.533 80.0837 158.323 82.761C163.315 86.2852 165.921 91.2007 166.621 97.2089H168.851C168.883 96.601 168.936 96.088 168.936 95.5751C168.943 88.3863 168.904 81.1975 168.965 74.0052C168.979 72.1255 168.236 70.98 166.55 70.1543C161.756 67.8073 157.036 65.3091 152.242 62.962C150.213 61.9712 148.693 60.5623 147.491 58.679C142.11 50.2429 136.691 41.8314 131.267 33.4199C127.372 27.3765 128.69 28.1565 121.506 28.1284C114.22 28.1038 106.93 28.1214 99.4956 28.1214L99.4921 28.1249ZM46.6321 82.2656C52.1083 86.113 54.8906 91.1128 55.58 97.2159H96.1831V82.2656H46.6321ZM130.525 98.4175C130.38 107.412 137.864 114.963 147 115.033C155.972 115.104 163.52 107.676 163.594 98.6986C163.669 89.8128 156.368 82.3781 147.378 82.1848C138.292 81.9881 130.674 89.3244 130.529 98.414L130.525 98.4175ZM19.534 98.6073C19.5446 107.683 26.9369 115.054 36.0085 115.037C45.0943 115.019 52.4972 107.641 52.4937 98.6003C52.4901 89.5528 45.1084 82.2024 36.005 82.1813C26.951 82.1602 19.5234 89.5704 19.534 98.6073ZM16.4653 97.2264C17.0875 90.9688 20.043 86.0954 25.2576 82.2762H3.1584V97.2264H16.4653Z"
+                            fill="#B2B2B2" />
+                        <path
+                            d="M41.7953 46.2592C41.7953 42.1729 41.7847 38.0866 41.7953 34.0003C41.8023 31.8535 42.0604 31.5865 44.27 31.604C46.3806 31.6216 48.5371 31.4776 50.5947 31.8359C58.2486 33.1711 63.2829 39.738 62.7491 47.4468C62.2364 54.8745 56.1734 60.6227 48.4381 60.9846C46.9144 61.0549 45.3836 60.9846 43.8564 61.0127C42.3609 61.0408 41.7634 60.3311 41.7776 58.8659C41.8165 54.6637 41.7917 50.4614 41.7917 46.2557L41.7953 46.2592ZM44.9063 34.7136V57.854C50.3825 58.4302 55.0279 57.2075 58.0047 52.4185C60.5748 48.2795 60.5147 43.9683 57.835 39.8785C54.8229 35.2828 50.2729 34.1619 44.9063 34.7101V34.7136Z"
+                            fill="#B2B2B2" />
+                        <path
+                            d="M84.5515 52.1544C84.5267 56.7853 80.9914 60.5203 76.1975 60.9735C71.7784 61.3916 67.5325 58.2153 66.6769 53.8269C66.578 53.3139 66.4153 52.7061 66.5992 52.2739C66.8572 51.6625 67.4088 51.1706 67.8365 50.6295C68.3951 51.1039 69.0916 51.4868 69.4663 52.0736C69.7845 52.5761 69.6678 53.3315 69.8587 53.9393C70.7072 56.6167 73.592 58.3559 76.3602 57.8991C79.2485 57.4213 81.4298 54.8388 81.3556 51.9752C81.2813 49.0554 79.0435 46.4554 76.1021 46.357C71.2304 46.1954 68.6991 43.1561 68.1512 40.0361C67.4689 36.1571 70.4279 32.1481 74.3592 31.6667C78.5697 31.1503 82.4056 34.0665 82.7768 38.0615C82.8793 39.1472 82.7308 40.1696 81.4333 40.3066C80.2455 40.4296 79.8919 39.5301 79.7046 38.5147C79.2096 35.8514 77.3925 34.4109 74.939 34.6744C72.7153 34.9133 71.1032 36.7368 71.1314 38.9715C71.1633 41.3713 72.938 43.0718 75.5824 43.237C80.8642 43.5637 84.5762 47.253 84.5515 52.1544Z"
+                            fill="#B2B2B2" />
+                        <path
+                            d="M14.9062 59.6249C15.1396 58.9327 15.2456 58.5989 15.3658 58.2722C18.3602 49.9801 21.3511 41.6846 24.3597 33.3996C24.5364 32.9147 24.7486 32.3876 25.1021 32.0363C25.9965 31.1474 27.1596 31.6287 27.7182 33.1501C29.1712 37.0923 30.5854 41.0521 32.0207 45.0049C33.6151 49.3969 35.2131 53.7853 36.811 58.1738C37.1858 59.2068 37.5464 60.3171 36.1605 60.8265C34.7676 61.3395 34.3257 60.2644 33.9474 59.2279C32.9929 56.5927 31.9889 53.9751 31.0944 51.3188C30.7657 50.3455 30.3379 49.8888 29.2313 49.938C27.1773 50.0293 25.1127 50.0328 23.0587 49.938C21.892 49.8853 21.4042 50.3666 21.0577 51.3891C20.1208 54.1543 19.1698 56.9159 18.0597 59.6144C17.8193 60.2011 16.9178 60.7984 16.278 60.8511C15.829 60.8863 15.3057 60.0044 14.9098 59.6249H14.9062ZM26.099 37.5702C24.897 40.901 23.8506 43.8033 22.7511 46.8495H29.4399C28.3369 43.7857 27.3046 40.9151 26.099 37.5702Z"
+                            fill="#B2B2B2" />
+                        <path
+                            d="M122.391 59.6066C117.102 59.6066 111.813 59.6136 106.521 59.6031C104.46 59.5996 104.025 59.1639 104.025 57.1541C104.018 49.9724 104.018 42.7871 104.025 35.6053C104.025 33.3145 104.29 33.0404 106.521 33.0404C112.163 33.0334 117.805 33.065 123.448 33.0158C124.646 33.0053 125.385 33.4023 126.029 34.4107C130.755 41.7963 135.553 49.1396 140.269 56.5322C140.654 57.1365 140.965 58.1976 140.682 58.7001C140.389 59.2236 139.339 59.5609 138.611 59.5715C133.205 59.6417 127.796 59.6101 122.391 59.6101V59.6066ZM107.246 35.9989V56.4479H136.426C136.334 56.1633 136.313 55.9841 136.224 55.8506C132.138 49.5086 128.065 43.156 123.918 36.8527C123.614 36.3924 122.787 36.0516 122.193 36.034C119.255 35.9497 116.314 35.9953 113.376 35.9953C111.332 35.9953 109.292 35.9953 107.246 35.9953V35.9989Z"
+                            fill="#B2B2B2" />
+                        <path
+                            d="M147.022 90.2203C151.685 90.2098 155.471 93.892 155.517 98.4842C155.566 103.157 151.773 107.001 147.092 107.026C142.419 107.05 138.59 103.228 138.607 98.551C138.622 93.9412 142.369 90.2309 147.022 90.2168V90.2203ZM152.441 98.551C152.42 95.5785 150.048 93.2455 147.05 93.2561C143.974 93.2631 141.616 95.6699 141.676 98.7443C141.729 101.692 144.161 104.008 147.152 103.958C150.126 103.913 152.466 101.52 152.445 98.551H152.441Z"
+                            fill="#B2B2B2" />
+                        <path
+                            d="M44.4293 98.5545C44.4612 103.192 40.788 106.948 36.1426 107.026C31.4689 107.103 27.5659 103.315 27.5199 98.6634C27.474 94.0255 31.3204 90.2133 36.033 90.2168C40.6925 90.2203 44.3975 93.899 44.4293 98.5545ZM36.0294 93.2561C33.0492 93.249 30.6133 95.6066 30.5745 98.537C30.5356 101.46 32.9466 103.92 35.8845 103.962C38.9249 104.004 41.4455 101.569 41.4455 98.5932C41.4455 95.6874 38.9885 93.2666 36.0294 93.2596V93.2561Z"
+                            fill="#B2B2B2" />
+                    </svg>
+
+                </div>
+                <div class="no-permit mb-5">
                     <span>You Don't Have Any Mobile Advertisement Permit</span>
                 </div>
                 <div class="create-permit">
-                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <button type="button" class="btn request" data-bs-toggle="modal" data-bs-target="#myModal">
                         Request Mobile Permit
                     </button>
                 </div>
@@ -47,16 +75,36 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <!-- Modal Form -->
-                    <form>
-                        <div class="modal-header bg-secondary">
+                    <form [formGroup]="permitForm">
+                        <div class="modal-header">
                             <h4 class="modal-title">Mobile Permit Application</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row g-3">
                                 <div class="col-4">
+
                                     <label for="adsType" class="form-label">Ads Type</label>
-                                    <select name="adsType" id="adsType" class="form-control">
+                                    <select name="adsType" id="adsType" formControlName="adsType" class="form-select">
+                                        <option value="" disabled selected>Select Option
+                                        </option>
+                                        <option value="Pictures">Pictures</option>
+                                        <option value="Videos">Videos</option>
+                                        <option value="Text">Text</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="brandingYear" class="form-label">
+                                        Branding Year
+                                    </label>
+                                    <input type="date" id="brandingYear" formControlName="brandingYear"
+                                        class="form-control" placeholder="Select Year">
+                                </div>
+                                <div class="col-4">
+                                    <label for="brandingType" class="form-label">
+                                        Branding Type
+                                    </label>
+                                    <select id="brandingType" formControlName="brandingType" class="form-select">
                                         <option value="" disabled selected>Select Option</option>
                                         <option value="Pictures">Pictures</option>
                                         <option value="Videos">Videos</option>
@@ -64,29 +112,20 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="brandingYear" class="form-label">Branding Year</label>
-                                    <input type="date" id="brandingYear" class="form-control" placeholder="Select Year">
-                                </div>
-                                <div class="col-4">
-                                    <label for="brandingType" class="form-label">Branding Type</label>
-                                    <select id="brandingType" class="form-control">
-                                        <option value="" disabled selected>Select Option</option>
-                                        <option value="Pictures">Pictures</option>
-                                        <option value="Videos">Videos</option>
-                                        <option value="Text">Text</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="adsPeriod" class="form-label">Ads Period</label>
-                                    <select id="adsPeriod" class="form-control">
+                                    <label for="adsPeriod" class="form-label">
+                                        Ads Period
+                                    </label>
+                                    <select id="adsPeriod" formControlName="adsPeriod" class="form-select">
                                         <option value="" disabled selected>Select Option</option>
                                         <option value="Short-term">Short-term</option>
                                         <option value="Long-term">Long-term</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="vehicleType" class="form-label">Vehicle Type</label>
-                                    <select id="vehicleType" class="form-control">
+                                    <label for="vehicleType" class="form-label">
+                                        Vehicle Type
+                                    </label>
+                                    <select id="vehicleType" formControlName="vehicleType" class="form-select">
                                         <option value="" disabled selected>Select Option</option>
                                         <option value="Car">Car</option>
                                         <option value="Van">Van</option>
@@ -94,45 +133,51 @@
                                     </select>
                                 </div>
                                 <div class="col-4">
-                                    <label for="numVehicles" class="form-label">No Of Vehicles</label>
-                                    <input id="numVehicles" class="form-control" type="number" placeholder="Enter number">
+                                    <label for="noOfVehicle" class="form-label">
+                                        No Of Vehicles
+                                    </label>
+                                    <input id="noOfVehicle" formControlName="noOfVehicle" class="form-control"
+                                        type="text" placeholder="Enter number">
                                 </div>
                                 <div class="col-4">
-                                    <label for="startDate" class="form-label">Start Date</label>
-                                    <input id="startDate" class="form-control" type="date">
+                                    <label for="startDate" class="form-label">
+                                        Start Date
+                                    </label>
+                                    <input id="startDate" formControlName="startDate" class="form-control" type="date">
                                 </div>
                                 <div class="col-4">
-                                    <label for="endDate" class="form-label">End Date</label>
-                                    <input id="endDate" class="form-control" type="date">
+                                    <label for="endDate" class="form-label">
+                                        End Date
+                                    </label>
+                                    <input id="endDate" formControlName="endDate" class="form-control" type="date">
                                 </div>
                             </div>
 
-                            <fieldset class="row mt-4 bordered">
-                                <legend>Contact Person Information</legend>
-                                <div class="col-6 mb-3">
-                                    <label for="fname" class="form-label">First Name</label>
-                                    <input class="form-control" type="text" id="fname" placeholder="Enter your first name">
+                            
+                            <fieldset class="border mt-3 mb-3 p-3">
+                            <legend class="float-none w-auto px-2">Contact Person Information</legend>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input id="name" formControlName="name" class="form-control" type="text" placeholder="Enter Name">
                                 </div>
-                                <div class="col-6 mb-3">
-                                    <label for="lname" class="form-label">Last Name</label>
-                                    <input class="form-control" type="text" id="lname" placeholder="Enter your last name">
-                                </div>
-                                <div class="col-6 mb-3">
+                                <div class="col-6">
                                     <label for="email" class="form-label">Email</label>
-                                    <input class="form-control" type="email" id="email" placeholder="Enter your email">
+                                    <input id="email" formControlName="email" class="form-control" type="email" placeholder="Enter Email">
                                 </div>
-                                <div class="col-6 mb-3">
-                                    <label for="birthday" class="form-label">Birthday</label>
-                                    <input class="form-control" type="date" id="birthday">
+                                <div class="col-6">
+                                    <label for="phoneNo" class="form-label">Phone Number</label>
+                                    <input id="phoneNo" formControlName="phoneNo" class="form-control" type="text" placeholder="Enter number">
                                 </div>
-                            </fieldset>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="col-12 mt-3">
-                                        <input type="submit" class="btn btn-dark" value="Submit">
-                                    </div>
+                                <div class="col-6">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input id="address" formControlName="address" class="form-control" type="text" placeholder="Enter Address">
                                 </div>
                             </div>
+                        </fieldset>
+                        <div class="row">
+                            <button type="submit" class="col-12 btn btn-primary">Continue</button>
+                        </div>
                         </div>
                     </form>
                 </div>
