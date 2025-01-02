@@ -169,6 +169,7 @@
                                     <label for="phoneNo" class="form-label">Phone Number</label>
                                     <input id="phoneNo" formControlName="phoneNo" class="form-control" type="text" placeholder="Enter number">
                                 </div>
+                                    
                                 <div class="col-6">
                                     <label for="address" class="form-label">Address</label>
                                     <input id="address" formControlName="address" class="form-control" type="text" placeholder="Enter Address">
@@ -176,8 +177,16 @@
                             </div>
                         </fieldset>
                         <div class="row">
-                            <button type="submit" class="col-12 btn btn-primary">Continue</button>
+                        <div class="col-12">
+                            <button *ngIf="showContinueButton" type="button" class="col-12 btn btn-primary" (click)="onContinue()" [hidden]="isEditable">Continue</button>
                         </div>
+                        <div class="col-4">
+                            <button ngIf="showEditButton" type="button" class="col-4 btn btn-secondary" (click)="onEdit()" [hidden]="!isEditable" >Edit</button>
+                        </div>
+                        <div class="col-8">
+                            <button *ngIf="showSubmitButton" type="submit" class="col-8 btn btn-primary" (click)="onSubmit()" [hidden]="!isEditable">Submit</button>
+                        </div>
+                     </div>
                         </div>
                     </form>
                 </div>
